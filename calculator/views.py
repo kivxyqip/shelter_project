@@ -79,7 +79,7 @@ class ShelterCreateView(CreateView):
         'capacity',
         'email',
         'website',
-        'has_vet'
+        'has_vet',
         'photo'
     ]
     success_url = reverse_lazy('shelter_list')
@@ -100,7 +100,7 @@ class ShelterUpdateView(UpdateView):
         'capacity',
         'email',
         'website',
-        'has_vet'
+        'has_vet',
         'photo'
     ]
     success_url = reverse_lazy('shelter_list')
