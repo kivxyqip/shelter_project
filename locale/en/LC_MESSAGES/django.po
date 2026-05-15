@@ -438,16 +438,12 @@ msgid "Вітаємо у CatShelter! 🐱"
 msgstr "Welcome to CatShelter! 🐱"
 
 #: .\templates\project\cats_index.html:263
-#, fuzzy
-#| msgid ""
-#| "Це платформа для керування притулками, де ми допомагаємо кожному "
-#| "пухнастику знайти свою родину."
 msgid ""
 "Це платформа для керування притулками, де ми допомагаємо кожному пухнастику "
 "знайти свою родину."
 msgstr ""
-"This is a shelter management platform where we help every furry friend find "
-"their family."
+"This is a shelter management platform where we help every furry friend "
+"find their family."
 
 #: .\templates\project\cats_index.html:264
 msgid "Розробник"
@@ -474,12 +470,9 @@ msgid "Олівер знайшов дім ❤️"
 msgstr "Oliver found a home ❤️"
 
 #: .\templates\project\cats_index.html:313
-#, fuzzy
-#| msgid ""
-#| "Після трьох місяців у притулку Олівер нарешті поїхав до нової родини."
 msgid "Після трьох місяців у притулку Олівер нарешті поїхав до нової родини."
-msgstr ""
-"After three months in the shelter, Oliver finally went to his new family."
+msgstr "After three months in the shelter, Oliver finally went to his new family."
+
 
 #: .\templates\project\cats_index.html:317
 msgid "10 травня"
@@ -490,11 +483,8 @@ msgid "Поради ветеринара 🏥"
 msgstr "Advice from a veterinarian 🏥"
 
 #: .\templates\project\cats_index.html:321
-#, fuzzy
-#| msgid "Весною котикам особливо важливе правильне харчування та вітаміни."
 msgid "Весною котикам особливо важливе правильне харчування та вітаміни."
-msgstr ""
-"In spring, proper nutrition and vitamins are especially important for cats."
+msgstr "In spring, proper nutrition and vitamins are especially important for cats."
 
 #: .\templates\project\cats_index.html:325
 msgid "8 травня"
@@ -505,8 +495,6 @@ msgid "Нові пухнастики 🐱"
 msgstr "New furry friends 🐱"
 
 #: .\templates\project\cats_index.html:329
-#, fuzzy
-#| msgid "До нашого притулку приїхали троє нових котиків, які шукають дім."
 msgid "До нашого притулку приїхали троє нових котиків, які шукають дім."
 msgstr "Three new kittens have arrived at our shelter, looking for a home."
 

@@ -441,16 +441,12 @@ msgid "Вітаємо у CatShelter! 🐱"
 msgstr "Willkommen im CatShelter! 🐱"
 
 #: .\templates\project\cats_index.html:263
-#, fuzzy
-#| msgid ""
-#| "Це платформа для керування притулками, де ми допомагаємо кожному "
-#| "пухнастику знайти свою родину."
 msgid ""
 "Це платформа для керування притулками, де ми допомагаємо кожному пухнастику "
 "знайти свою родину."
 msgstr ""
-"Dies ist eine Plattform zur Verwaltung von Tierheimen, auf der wir jedem "
-"pelzigen Freund helfenseine Familie zu finden."
+"Dies ist eine Plattform zur Verwaltung von Tierheimen, auf der wir jedem pelzigen Freund helfen"
+"seine Familie zu finden."
 
 #: .\templates\project\cats_index.html:264
 msgid "Розробник"
@@ -477,12 +473,8 @@ msgid "Олівер знайшов дім ❤️"
 msgstr "Oliver hat ein Zuhause gefunden ❤️"
 
 #: .\templates\project\cats_index.html:313
-#, fuzzy
-#| msgid ""
-#| "Після трьох місяців у притулку Олівер нарешті поїхав до нової родини."
 msgid "Після трьох місяців у притулку Олівер нарешті поїхав до нової родини."
-msgstr ""
-"Nach drei Monaten im Tierheim kam Oliver endlich zu seiner neuen Familie."
+msgstr "Nach drei Monaten im Tierheim kam Oliver endlich zu seiner neuen Familie."
 
 #: .\templates\project\cats_index.html:317
 msgid "10 травня"
@@ -493,12 +485,8 @@ msgid "Поради ветеринара 🏥"
 msgstr "Rat vom Tierarzt 🏥"
 
 #: .\templates\project\cats_index.html:321
-#, fuzzy
-#| msgid "Весною котикам особливо важливе правильне харчування та вітаміни."
 msgid "Весною котикам особливо важливе правильне харчування та вітаміни."
-msgstr ""
-"Im Frühling sind die richtige Ernährung und Vitamine für Katzen besonders "
-"wichtig."
+msgstr "Im Frühling sind die richtige Ernährung und Vitamine für Katzen besonders wichtig."
 
 #: .\templates\project\cats_index.html:325
 msgid "8 травня"
@@ -509,12 +497,9 @@ msgid "Нові пухнастики 🐱"
 msgstr "Neue pelzige Freunde 🐱"
 
 #: .\templates\project\cats_index.html:329
-#, fuzzy
 #| msgid "До нашого притулку приїхали троє нових котиків, які шукають дім."
 msgid "До нашого притулку приїхали троє нових котиків, які шукають дім."
-msgstr ""
-"Drei neue Kätzchen sind in unserem Tierheim angekommen und suchen ein "
-"Zuhause."
+msgstr "Drei neue Kätzchen sind in unserem Tierheim angekommen und suchen ein Zuhause."
 
 #: .\templates\project\favorites.html:4
 msgid "Мої улюбленці"
