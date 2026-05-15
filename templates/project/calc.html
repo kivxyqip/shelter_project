@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+
+<h1>Калькулятор</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ f.as_p }}
+    <input type="submit" value="Обчислити"/>
+</form>
+
+<hr>
+
+<label>Результат:</label>
+<input type="text" readonly value="{{ res }}"/>
+
+</body>
+</html>

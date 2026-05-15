@@ -1,0 +1,36 @@
+{% extends 'project/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Редагування котика — CatShelter" %}{% endblock %}
+
+{% block content %}
+<div style="max-width: 600px; margin: 40px auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+    <h2>{% trans "Інформація про котика" %}</h2>
+    <hr>
+
+    <!-- enctype нужен обязательно, так как у нас есть поле для фото -->
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <style>
+            /* Простой стиль, чтобы форма не выглядела криво */
+            form p { margin-bottom: 15px; display: flex; flex-direction: column; }
+            input, select, textarea {
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #ddd;
+                margin-top: 5px;
+            }
+        </style>
+
+        {{ form.as_p }} <!-- Django сам выведет все поля из модели -->
+
+        <div style="margin-top: 20px; display: flex; gap: 10px;">
+            <button type="submit" style="background: #ff6b6b; color: white; border: none; padding: 12px 25px; border-radius: 12px; cursor: pointer; font-weight: bold;">
+                {% trans "Зберегти" %}
+            </button>
+            <a href="{% url 'cat_list' %}" style="text-decoration: none; color: #777; padding: 12px;">{% trans "Скасувати" %}</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

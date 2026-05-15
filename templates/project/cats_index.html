@@ -1,0 +1,336 @@
+{% extends 'project/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Головна — Система управління" %}{% endblock %}
+
+{% block content %}
+<style>
+
+    body {
+        background-color: #fdfaf5;
+        margin: 0;
+    }
+
+    /* HERO */
+
+    .hero {
+        background: linear-gradient(135deg, #ffeaa7 0%, #ffd35c 100%);
+        padding: 40px 10%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border-radius: 0 0 40px 40px;
+
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .hero-text {
+        max-width: 600px;
+    }
+
+    .hero-text h1 {
+        color: #3f3f3f;
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+
+    .hero-text p {
+        color: #5f5f5f;
+        line-height: 1.7;
+    }
+
+    .hero-img {
+        width: 300px;
+        height: 220px;
+
+        overflow: hidden;
+
+        border-radius: 24px;
+
+        box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+
+        transition: 0.3s ease;
+    }
+
+    .hero-img:hover {
+        transform: translateY(-3px);
+    }
+
+    .hero-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* MAIN */
+
+    .main-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    /* SECTION */
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 1.9rem;
+        color: #333;
+    }
+
+    /* GRID */
+
+    .cat-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 20px;
+
+        margin-bottom: 30px;
+    }
+
+    /* CARD */
+
+    .cat-card {
+        background: white;
+
+        border-radius: 22px;
+
+        overflow: hidden;
+
+        box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+
+        transition: 0.3s ease;
+
+        text-align: center;
+
+        padding-bottom: 15px;
+
+        border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .cat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 25px rgba(0,0,0,0.07);
+    }
+
+    /* PHOTO */
+
+    .cat-card img {
+        width: 100%;
+        height: 200px;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 22px 22px 0 0;
+    }
+
+    .cat-card .img-stub {
+        height: 200px;
+
+        line-height: 200px;
+
+        background: #fafafa;
+
+        font-size: 50px;
+
+        border-radius: 22px 22px 0 0;
+    }
+
+    /* TEXT */
+
+    .cat-card h3 {
+        margin: 14px 0 6px;
+
+        font-size: 1.2rem;
+
+        color: #333;
+    }
+
+    .cat-card p {
+        color: #777;
+        font-size: 0.92rem;
+    }
+
+    /* BUTTON */
+
+    .button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+
+        margin-top: 10px;
+    }
+
+    .btn-all {
+        padding: 12px 24px;
+
+        background: #ff6b6b;
+
+        color: white;
+
+        border-radius: 14px;
+
+        text-decoration: none;
+
+        font-weight: 600;
+
+        transition: 0.3s ease;
+
+        box-shadow: 0 6px 16px rgba(255,107,107,0.25);
+    }
+
+    .btn-all:hover {
+        background: #f25555;
+
+        transform: translateY(-2px);
+    }
+
+    /* NEWS */
+
+    .news-block {
+        margin-top: 55px;
+    }
+
+    .news-title {
+        font-size: 1.9rem;
+        color: #333;
+
+        margin-bottom: 25px;
+    }
+
+    .news-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+    }
+
+    .news-card {
+        background: white;
+
+        padding: 22px;
+
+        border-radius: 22px;
+
+        box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+
+        transition: 0.3s ease;
+    }
+
+    .news-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .news-date {
+        color: #ff6b6b;
+
+        font-size: 0.85rem;
+        font-weight: 700;
+
+        margin-bottom: 10px;
+    }
+
+    .news-card h3 {
+        margin: 0 0 10px;
+
+        font-size: 1.1rem;
+
+        color: #333;
+    }
+
+    .news-card p {
+        color: #666;
+
+        line-height: 1.6;
+
+        font-size: 0.95rem;
+    }
+
+</style>
+
+<!-- Шапка-приветствие -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>{% trans "Вітаємо у CatShelter! 🐱" %}</h1>
+        <p>{% trans "Це платформа для керування притулками, де ми допомагаємо кожному пухнастику знайти свою родину." %}</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">{% trans "Розробник" %}: <strong>Mariia Puhachova</strong></p>
+    </div>
+    <div class="hero-img">
+    <img src="{% static 'images/hero_cat.png' %}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+    </div>
+</section>
+
+<!-- Основной контент (Центрированный) -->
+<div class="main-container">
+
+    <div class="section-header">
+        <h2>{% trans "Наші підопічні" %}</h2>
+    </div>
+
+    <!-- Сетка -->
+    <div class="cat-grid">
+    {% for cat in cats_preview %}
+    <!-- Оборачиваем карточку в ссылку -->
+    <a href="{% url 'cat_detail' cat.id %}" style="text-decoration: none; color: inherit; display: block;">
+        <div class="cat-card">
+            {% if cat.photo %}
+                <img src="{{ cat.photo.url }}" alt="{{ cat.name }}" class="cat-img">
+            {% else %}
+                <div class="img-stub">🐱</div>
+            {% endif %}
+            <h3>{{ cat.name }}</h3>
+            <p>{{ cat.age|floatformat:"-1" }} р. | {{ cat.get_gender_display }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+    <!-- Кнопка справа под сеткой -->
+    <div class="button-wrapper">
+        <a href="{% url 'cat_list' %}" class="btn-all">{% trans "Переглянути усіх котиків →" %}</a>
+    </div>
+
+    <!-- Новости -->
+    <section class="news-block">
+
+    <h2 class="news-title">{% trans "Історії щасливих хвостиків 🐾" %}</h2>
+
+    <div class="news-grid">
+
+        <div class="news-card">
+            <div class="news-date">{% trans "12 травня" %}</div>
+
+            <h3>{% trans "Олівер знайшов дім ❤️" %}</h3>
+
+            <p>{% trans "Після трьох місяців у притулку Олівер нарешті поїхав до нової родини." %}</p>
+        </div>
+
+        <div class="news-card">
+            <div class="news-date">{% trans "10 травня" %}</div>
+
+            <h3>{% trans "Поради ветеринара 🏥" %}</h3>
+
+            <p>{% trans "Весною котикам особливо важливе правильне харчування та вітаміни." %} </p>
+        </div>
+
+        <div class="news-card">
+            <div class="news-date">{% trans "8 травня" %}</div>
+
+            <h3>{% trans "Нові пухнастики 🐱" %}</h3>
+
+            <p>{% trans "До нашого притулку приїхали троє нових котиків, які шукають дім." %}</p>
+        </div>
+
+    </div>
+
+    </section>
+</div>
+{% endblock %}

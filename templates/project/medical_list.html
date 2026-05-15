@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Медкартки</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; color: #333; padding: 40px; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #17a2b8; display: inline-block; padding-bottom: 10px; }
+
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 20px; }
+        th { background-color: #e2f7f9; color: #495057; padding: 15px; text-align: left; border-bottom: 2px solid #dee2e6; }
+        td { padding: 15px; border-bottom: 1px solid #eee; }
+        tr:hover { background-color: #f0fbfc; transition: 0.2s; }
+
+        .back-link { display: inline-block; margin-top: 30px; color: #17a2b8; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>🏥 Журнал медичних оглядів</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Кіт / Дата</th>
+                <th>Показники</th>
+                <th>Діагноз та Лікування</th>
+                <th>Рекомендації</th>
+                <th>Ветеринар</th>
+                <th>Наступний візит</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in records %}
+            <tr>
+                <td><strong>{{ r.cat.name }}</strong><br><small>{{ r.checkup_date|date:"d.m.Y" }}</small></td>
+                <td>
+                    ⚖️ {{ r.weight }} кг<br>
+                    🌡️ {{ r.temperature|default:"—" }} °C
+                </td>
+                <td>
+                    <strong>{{ r.diagnosis }}</strong><br>
+                    <small style="color: #555;">💊 {{ r.treatment|default:"Без ліків" }}</small>
+                </td>
+                <td><small>{{ r.recommendations|default:"—" }}</small></td>
+                <td>👨‍⚕️ {{ r.vet_name|default:"Черговий" }}</td>
+                <td>
+                    {% if r.next_visit %}
+                        <span style="color: #dc3545; font-weight: bold;">📅 {{ r.next_visit|date:"d.m.Y" }}</span>
+                    {% else %}
+                        <span style="color: #999;">—</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="6" style="text-align: center;">Записів ще не було.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'cats_index' %}" class="back-link">← Назад до меню</a>
+</body>

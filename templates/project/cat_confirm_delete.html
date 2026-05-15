@@ -1,0 +1,24 @@
+{% extends 'project/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Видалення — CatShelter" %}{% endblock %}
+
+{% block content %}
+<div style="max-width: 500px; margin: 100px auto; text-align: center; background: white; padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+    <span style="font-size: 4rem;">⚠️</span>
+    <h2 style="color: #333;">{% trans "Видалити котика" %} <strong>{{ object.name }}</strong>?</h2>
+    <p style="color: #888;">{% trans "Цю дію неможливо буде скасувати." %}"</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px;">
+            <button type="submit" style="background: #e74c3c; color: white; border: none; padding: 12px 30px; border-radius: 12px; cursor: pointer; font-weight: bold;">
+                {% trans "Так, видалити" %}"
+            </button>
+            <a href="{% url 'cat_detail' object.id %}" style="text-decoration: none; background: #eee; color: #333; padding: 12px 30px; border-radius: 12px; font-weight: bold;">
+                {% trans "Ні, назад" %}
+            </a>
+        </div>
+    </form>
+</div>
+{% endblock %}

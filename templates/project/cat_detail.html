@@ -1,0 +1,153 @@
+{% extends 'project/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{{ cat.name }} — {% trans "Досьє котика" %}{% endblock %}
+
+{% block content %}
+<style>
+    /* GRID & LAYOUT */
+    .detail-grid { display: grid; grid-template-columns: 1fr 350px; gap: 30px; align-items: start; margin-top: 20px; }
+    .main-content { background: white; padding: 35px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); }
+    .cat-big-img { width: 100%; height: 500px; object-fit: cover; border-radius: 25px; margin-top: 20px; }
+
+    /* SPECS GRID */
+    .specs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 30px 0; background: #fdfcfb; padding: 25px; border-radius: 20px; }
+    .spec-item { border-bottom: 1px solid #eee; padding-bottom: 8px; }
+    .spec-item label { display: block; font-size: 0.75rem; color: #a0a0a0; font-weight: 700; text-transform: uppercase; margin-bottom: 3px; }
+    .spec-item span { font-size: 1.05rem; color: #333; }
+
+    /* MEDICAL TABLE */
+    .med-card-section { margin-top: 40px; }
+    .med-card-section h2 { color: #2c3e50; border-left: 6px solid #17a2b8; padding-left: 15px; margin-bottom: 20px; }
+    .med-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .med-table th { background: #e2f7f9; padding: 12px; text-align: left; }
+    .med-table td { padding: 12px; border-bottom: 1px solid #f0f0f0; vertical-align: middle; }
+
+    /* Trash icon style */
+    .btn-delete-med { color: #e74c3c; text-decoration: none; font-size: 1.1rem; padding: 5px; transition: 0.2s; border-radius: 5px; }
+    .btn-delete-med:hover { background: #fff5f5; color: #c0392b; transform: scale(1.1); }
+
+    /* SIDEBAR & BUTTONS */
+    .sidebar { display: flex; flex-direction: column; gap: 25px; }
+    .action-card { background: #2d3436; color: white; padding: 25px; border-radius: 25px; }
+    .btn-main {
+        display: block; width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 15px; text-align: center;
+        text-decoration: none; font-weight: 700; transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.2s;
+    }
+    .btn-main:hover { transform: scale(1.03); box-shadow: 0 8px 20px rgba(0,0,0,0.1); color: inherit; }
+    .btn-main:active { transform: scale(0.98); }
+    .btn-fav { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); }
+
+    /* NEWS BLOCK */
+    .news-sidebar-block { background: #fff9e6; padding: 20px; border-radius: 25px; border: 1px solid #fceabb; }
+    .mini-news-item { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #e6cc8e; }
+    .mini-news-item:last-child { border: none; margin: 0; }
+    .mini-news-item h4 { margin: 0 0 5px; color: #d35400; font-size: 0.95rem; }
+    .mini-news-item p { margin: 0; font-size: 0.8rem; color: #7f8c8d; }
+</style>
+
+<div class="py-4">
+    <div class="detail-grid">
+        <!-- ЛІВА ЧАСТИНА -->
+        <div class="main-content">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <a href="{% url 'cat_list' %}" class="text-decoration-none fw-bold" style="color: #ff6b6b;">← {% trans "Повернутися" %}</a>
+                <span class="badge rounded-pill p-2 px-3" style="{% if cat.is_adopted %}background:#e3fced; color:#155724;{% else %}background:#fff4e6; color:#d9480f;{% endif %}">
+                    {% if cat.is_adopted %}🏠 {% trans "Вдома" %}{% else %}🔍 {% trans "Шукає дім" %}{% endif %}
+                </span>
+            </div>
+
+            <h1 class="display-3 fw-bold m-0">{{ cat.name }}</h1>
+
+            {% if cat.photo %}<img src="{{ cat.photo.url }}" class="cat-big-img" alt="{{ cat.name }}">
+            {% else %}<div class="cat-big-img d-flex align-items-center justify-content-center bg-light fs-1">🐱</div>{% endif %}
+
+            {% if user.is_authenticated %}
+            <div class="specs-grid">
+                <div class="spec-item"><label>{% trans "Порода" %}</label><span>{{ cat.breed|default:"-" }}</span></div>
+                <div class="spec-item"><label>{% trans "Вік" %}</label><span>{{ cat.age|floatformat:"-1" }} {% trans "р." %}</span></div>
+                <div class="spec-item"><label>{% trans "Стать" %}</label><span>{{ cat.get_gender_display }}</span></div>
+                <div class="spec-item"><label>{% trans "Забарвлення" %}</label><span>{{ cat.color }}</span></div>
+                <div class="spec-item"><label>{% trans "Вакцинація" %}</label><span>{% if cat.is_vaccinated %}✅{% else %}❌{% endif %}</span></div>
+                <div class="spec-item"><label>{% trans "Стерилізація" %}</label><span>{% if cat.is_sterilized %}✅{% else %}❌{% endif %}</span></div>
+                <div class="spec-item"><label>{% trans "Прибуття" %}</label><span>{{ cat.arrival_date|date:"d.m.Y" }}</span></div>
+                <div class="spec-item"><label>{% trans "Притулок" %}</label><span>{{ cat.shelter.name }}</span></div>
+            </div>
+
+            <div class="mt-4">
+                <h3 class="text-uppercase small fw-bold text-muted" style="letter-spacing:1px;">{% trans "Характер та історія" %}</h3>
+                <p class="fs-5 lh-lg text-secondary">{{ cat.history|linebreaks }}</p>
+            </div>
+
+            <div class="med-card-section">
+                <h2>🏥 {% trans "Медична карта" %}</h2>
+                <table class="med-table">
+                    <thead>
+                        <tr>
+                            <th>{% trans "Дата" %}</th>
+                            <th>{% trans "Показники" %}</th>
+                            <th>{% trans "Діагноз / Лікування" %}</th>
+                            <th>{% trans "Ветеринар" %}</th>
+                            {% if user.is_staff %}<th></th>{% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for r in records %}
+                        <tr>
+                            <td><strong>{{ r.checkup_date|date:"d.m.Y" }}</strong></td>
+                            <td>⚖️ {{ r.weight }} {% trans "кг" %}<br>🌡️ {{ r.temperature|default:"—" }} °C</td>
+                            <td><strong>{{ r.diagnosis }}</strong><br><small class="text-muted">{{ r.treatment|default:_("Огляд") }}</small></td>
+                            <td>👨‍⚕️ {{ r.vet_name|default:_("Черговий") }}</td>
+                            {% if user.is_staff %}
+                            <td class="text-end">
+                             {% trans "Ви впевнені?" as translated_confirm %}
+                             <a href="{% url 'medical_record_delete' r.id %}"
+                                class="btn-delete-med"
+                                onclick="return confirm('{{ translated_confirm }}')">
+                                    🗑️
+                             </a>
+                            </td>
+                            {% endif %}
+                        </tr>
+                        {% empty %}
+                        <tr><td colspan="5" class="text-center text-muted py-5">{% trans "Записів ще не додано." %}</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- ПРАВА ЧАСТИНА -->
+        <div class="sidebar">
+            <div class="action-card">
+                <h3 class="m-0">{% trans "Зустріти" %} {{ cat.name }}?</h3>
+                <p class="small opacity-75 my-3">{% trans "Зателефонуйте нам або додайте котика в обране, щоб не загубити." %}</p>
+                {% if user.is_authenticated %}
+                    <a href="tel:{{ cat.shelter.phone }}" class="btn-main" style="background:#ff6b6b; color:white;">📞 {% trans "Подзвонити" %}</a>
+                    <a href="#" class="btn-main" style="background: white; color: #333;" onclick="alert('Ця функція в розробці')">✉️ {% trans "Написати" %}</a>
+                    <a href="{% url 'toggle_favorite' cat.id %}" class="btn-main btn-fav"
+                       {% if cat.id in user_favorite_ids %}style="background:#ff6b6b; border-color:#ff6b6b;"{% endif %}>
+                       {% if cat.id in user_favorite_ids %}❤️ {% trans "В обраному" %}{% else %}🤍 {% trans "В обране" %}{% endif %}
+                    </a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="btn-main" style="background:#ff6b6b; color:white;">🔐 {% trans "Увійдіть" %}</a>
+                {% endif %}
+            </div>
+
+            {% if user.is_staff %}
+                <a href="{% url 'cat_update' cat.id %}" class="btn-main" style="background:#f1c40f; color:black;">📝 {% trans "Редагувати" %}</a>
+                <a href="{% url 'cat_delete' cat.id %}" class="btn-main" style="background:#e74c3c; color:white;">🗑️ {% trans "Видалити" %}</a>
+                <a href="{% url 'medical_record_create' cat.id %}" class="btn-main" style="background:#2ecc71; color:white;">🏥 {% trans "Додати запис" %}</a>
+            {% endif %}
+
+            <div class="news-sidebar-block">
+                <h3 class="m-0 mb-3">{% trans "Новини" %} 🐾</h3>
+                <div class="mini-news-item"><h4>{% trans "Нові пухнастики!" %}</h4><p>{% trans "Сьогодні до нас прибули два рудих брати з Миколаєва." %}</p></div>
+                <div class="mini-news-item"><h4>{% trans "Потрібна допомога" %}</h4><p>{% trans "Збираємо кошти на нові лежаки для старших котиків." %}</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

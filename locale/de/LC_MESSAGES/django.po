@@ -1,0 +1,676 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-15 18:25+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\calculator\models.py:7
+msgid "Назва притулку"
+msgstr "Name der Unterkunft"
+
+#: .\calculator\models.py:8
+msgid "Адреса"
+msgstr "Adresse"
+
+#: .\calculator\models.py:12
+msgid "Години роботи"
+msgstr "Öffnungszeiten"
+
+#: .\calculator\models.py:13
+msgid "Телефон"
+msgstr "Telefon"
+
+#: .\calculator\models.py:14 .\templates\project\shelter_list.html:108
+msgid "Місткість"
+msgstr "Kapazität"
+
+#: .\calculator\models.py:15
+msgid "Email"
+msgstr "E-Mail"
+
+#: .\calculator\models.py:16
+msgid "Вебсайт"
+msgstr "Webseite"
+
+#: .\calculator\models.py:17
+msgid "Є власний ветеринар"
+msgstr "Hat einen eigenen Tierarzt"
+
+#: .\calculator\models.py:22
+msgid "Фото притулку"
+msgstr "Foto der Unterkunft"
+
+#: .\calculator\models.py:31 .\templates\project\cat_detail.html:75
+msgid "Притулок"
+msgstr "Unterschlupf"
+
+#: .\calculator\models.py:32
+msgid "Кличка"
+msgstr "Name"
+
+#: .\calculator\models.py:33 .\calculator\models.py:52
+msgid "Кіт"
+msgstr "M"
+
+#: .\calculator\models.py:33
+msgid "Кішка"
+msgstr "F"
+
+#: .\calculator\models.py:34 .\templates\project\cat_detail.html:69
+msgid "Вік"
+msgstr "Alter"
+
+#: .\calculator\models.py:35 .\templates\project\cat_detail.html:68
+#: .\templates\project\cat_list.html:85
+msgid "Порода"
+msgstr "Züchten"
+
+#: .\calculator\models.py:36
+msgid "Окрас"
+msgstr "Farbe"
+
+#: .\calculator\models.py:37
+msgid "Вакцинований"
+msgstr "Geimpft"
+
+#: .\calculator\models.py:38
+msgid "Стерилізований"
+msgstr "Sterilisiert"
+
+#: .\calculator\models.py:39 .\templates\project\cat_detail.html:70
+msgid "Стать"
+msgstr "Sex"
+
+#: .\calculator\models.py:40 .\templates\project\cat_list.html:87
+msgid "Характер"
+msgstr "Natur"
+
+#: .\calculator\models.py:41
+msgid "Дата прибуття"
+msgstr "Ankunftsdatum"
+
+#: .\calculator\models.py:42
+msgid "Історія котика"
+msgstr "Die Geschichte der Katze"
+
+#: .\calculator\models.py:43
+msgid "Прилаштований"
+msgstr "Angepasst"
+
+#: .\calculator\models.py:44
+msgid "Фото"
+msgstr "Foto"
+
+#: .\calculator\models.py:53 .\templates\project\cat_detail.html:91
+#: .\templates\project\shelter_list.html:110
+msgid "Ветеринар"
+msgstr "Tierarzt"
+
+#: .\calculator\models.py:54
+msgid "Дата огляду"
+msgstr "Überprüfungsdatum"
+
+#: .\calculator\models.py:55
+msgid "Наступний огляд"
+msgstr "Nächste Rezension"
+
+#: .\calculator\models.py:56
+msgid "Вага (кг)"
+msgstr "Gewicht (kg)"
+
+#: .\calculator\models.py:57
+msgid "Температура"
+msgstr "Temperatur"
+
+#: .\calculator\models.py:58
+msgid "Діагноз/Стан"
+msgstr "Diagnose/Zustand"
+
+#: .\calculator\models.py:59
+msgid "Лікування"
+msgstr "Behandlung"
+
+#: .\calculator\models.py:60
+msgid "Рекомендації"
+msgstr "Empfehlungen"
+
+#: .\calculator_project\settings.py:115
+msgid "Ukrainian"
+msgstr "Ukrainisch"
+
+#: .\calculator_project\settings.py:116
+msgid "English"
+msgstr "Englisch"
+
+#: .\calculator_project\settings.py:117
+msgid "German"
+msgstr "Deutsch"
+
+#: .\templates\project\base.html:65
+msgid "Головна"
+msgstr "Heim"
+
+#: .\templates\project\base.html:66
+msgid "Котики"
+msgstr "Katzen"
+
+#: .\templates\project\base.html:67
+msgid "Притулки"
+msgstr "Unterkünfte"
+
+#: .\templates\project\base.html:98
+msgid "Привіт,"
+msgstr "Grüße,"
+
+#: .\templates\project\base.html:101
+msgid "Адмінка"
+msgstr "Administrator"
+
+#: .\templates\project\base.html:103
+msgid "Змінити пароль"
+msgstr "Kennwort ändern"
+
+#: .\templates\project\base.html:106
+msgid "Вийти"
+msgstr "Abmelden"
+
+#: .\templates\project\base.html:109 .\templates\registration\login.html:20
+#: .\templates\registration\register.html:27
+msgid "Увійти"
+msgstr "Anmelden"
+
+#: .\templates\project\base.html:110
+msgid "Реєстрація"
+msgstr "Registrieren"
+
+#: .\templates\project\base.html:122
+msgid "Всі права захищені."
+msgstr "Alle Rechte vorbehalten."
+
+#: .\templates\project\base.html:124
+msgid "Правова інформація"
+msgstr "Rechtliche Informationen"
+
+#: .\templates\project\base.html:125
+msgid "Політика конфіденційності"
+msgstr "Datenschutzrichtlinie"
+
+#: .\templates\project\cat_confirm_delete.html:4
+msgid "Видалення — CatShelter"
+msgstr "Entfernung — CatShelter"
+
+#: .\templates\project\cat_confirm_delete.html:9
+msgid "Видалити котика"
+msgstr "Katze löschen"
+
+#: .\templates\project\cat_confirm_delete.html:10
+msgid "Цю дію неможливо буде скасувати."
+msgstr "Diese Handlung kann nicht rückgängig gemacht werden."
+
+#: .\templates\project\cat_confirm_delete.html:16
+#: .\templates\project\shelter_confirm_delete.html:14
+msgid "Так, видалити"
+msgstr "Ja, löschen"
+
+#: .\templates\project\cat_confirm_delete.html:19
+#: .\templates\project\shelter_confirm_delete.html:17
+msgid "Ні, назад"
+msgstr "Nein, zurück."
+
+#: .\templates\project\cat_detail.html:5
+msgid "Досьє котика"
+msgstr "Katzenakte"
+
+#: .\templates\project\cat_detail.html:55
+#, fuzzy
+#| msgid "Повернутися назад"
+msgid "Повернутися"
+msgstr "Geh zurück"
+
+#: .\templates\project\cat_detail.html:57 .\templates\project\cat_list.html:73
+msgid "Вдома"
+msgstr "Heim"
+
+#: .\templates\project\cat_detail.html:57 .\templates\project\cat_list.html:75
+msgid "Шукає дім"
+msgstr "Auf der Suche nach einem Zuhause"
+
+#: .\templates\project\cat_detail.html:69 .\templates\project\cat_list.html:80
+msgid "р."
+msgstr "J."
+
+#: .\templates\project\cat_detail.html:71 .\templates\project\cat_list.html:86
+msgid "Забарвлення"
+msgstr "Farbe"
+
+#: .\templates\project\cat_detail.html:72
+msgid "Вакцинація"
+msgstr "Impfung"
+
+#: .\templates\project\cat_detail.html:73
+msgid "Стерилізація"
+msgstr "Sterilisation"
+
+#: .\templates\project\cat_detail.html:74
+#, fuzzy
+#| msgid "Дата прибуття"
+msgid "Прибуття"
+msgstr "Ankunftsdatum"
+
+#: .\templates\project\cat_detail.html:79
+msgid "Характер та історія"
+msgstr "Charakter und Geschichte"
+
+#: .\templates\project\cat_detail.html:84
+msgid "Медична карта"
+msgstr "Medizinische Karte"
+
+#: .\templates\project\cat_detail.html:88
+msgid "Дата"
+msgstr "Datum"
+
+#: .\templates\project\cat_detail.html:89
+msgid "Показники"
+msgstr "Indikatoren"
+
+#: .\templates\project\cat_detail.html:90
+msgid "Діагноз / Лікування"
+msgstr "Diagnose / Behandlung"
+
+#: .\templates\project\cat_detail.html:99
+msgid "кг"
+msgstr "kg"
+
+#: .\templates\project\cat_detail.html:100
+msgid "Огляд"
+msgstr "Rezension"
+
+#: .\templates\project\cat_detail.html:101
+msgid "Черговий"
+msgstr "Regulär"
+
+#: .\templates\project\cat_detail.html:104
+msgid "Ви впевнені?"
+msgstr "Bist du sicher?"
+
+#: .\templates\project\cat_detail.html:114
+msgid "Записів ще не додано."
+msgstr "Es wurden noch keine Einträge hinzugefügt."
+
+#: .\templates\project\cat_detail.html:125
+msgid "Зустріти"
+msgstr "Treffen"
+
+#: .\templates\project\cat_detail.html:126
+msgid "Зателефонуйте нам або додайте котика в обране, щоб не загубити."
+msgstr ""
+"Rufen Sie uns an oder fügen Sie die Katze Ihren Favoriten hinzu, damit Sie "
+"sie nicht verlieren."
+
+#: .\templates\project\cat_detail.html:128
+msgid "Подзвонити"
+msgstr "Anruf"
+
+#: .\templates\project\cat_detail.html:129
+msgid "Написати"
+msgstr "Schreiben"
+
+#: .\templates\project\cat_detail.html:132
+msgid "В обраному"
+msgstr "In Favoriten"
+
+#: .\templates\project\cat_detail.html:132
+msgid "В обране"
+msgstr "Zu Favoriten hinzufügen"
+
+#: .\templates\project\cat_detail.html:135
+#: .\templates\project\shelter_list.html:127
+msgid "Увійдіть"
+msgstr "Anmelden"
+
+#: .\templates\project\cat_detail.html:140
+#: .\templates\project\shelter_list.html:91
+msgid "Редагувати"
+msgstr "Bearbeiten"
+
+#: .\templates\project\cat_detail.html:141
+#: .\templates\project\favorites.html:71
+#: .\templates\project\shelter_list.html:92
+msgid "Видалити"
+msgstr "Entfernen"
+
+#: .\templates\project\cat_detail.html:142
+#, fuzzy
+#| msgid "Додати медзапис"
+msgid "Додати запис"
+msgstr "Krankenakte hinzufügen"
+
+#: .\templates\project\cat_detail.html:146
+msgid "Новини"
+msgstr "Nachricht"
+
+#: .\templates\project\cat_detail.html:147
+msgid "Нові пухнастики!"
+msgstr "Neue pelzige Freunde!"
+
+#: .\templates\project\cat_detail.html:147
+msgid "Сьогодні до нас прибули два рудих брати з Миколаєва."
+msgstr "Heute kamen zwei rothaarige Brüder aus Mykolajiw bei uns an."
+
+#: .\templates\project\cat_detail.html:148
+msgid "Потрібна допомога"
+msgstr "Ich brauche Hilfe"
+
+#: .\templates\project\cat_detail.html:148
+msgid "Збираємо кошти на нові лежаки для старших котиків."
+msgstr "Wir sammeln Spenden für neue Betten für ältere Katzen."
+
+#: .\templates\project\cat_form.html:4
+msgid "Редагування котика — CatShelter"
+msgstr "Eine Katze bearbeiten — CatShelter"
+
+#: .\templates\project\cat_form.html:8
+msgid "Інформація про котика"
+msgstr "Informationen über die Katze"
+
+#: .\templates\project\cat_form.html:30
+#: .\templates\project\medical_record_form.html:13
+#: .\templates\project\shelter_form.html:17
+msgid "Зберегти"
+msgstr "Speichern"
+
+#: .\templates\project\cat_form.html:32
+#: .\templates\project\medical_record_form.html:16
+#: .\templates\project\shelter_form.html:19
+msgid "Скасувати"
+msgstr "Stornieren"
+
+#: .\templates\project\cat_list.html:5
+msgid "Наші котики — CatShelter"
+msgstr "Unsere Katzen — CatShelter"
+
+#: .\templates\project\cat_list.html:51
+#: .\templates\project\password_change_done.html:14
+#: .\templates\project\shelter_list.html:70
+msgid "На головну"
+msgstr "Zur Hauptseite"
+
+#: .\templates\project\cat_list.html:54
+msgid "Наші підопічні 🐾"
+msgstr "Unsere Schützlinge 🐾"
+
+#: .\templates\project\cat_list.html:55
+msgid "Кожен з них мріє про теплий дім та люблячу людину"
+msgstr ""
+"Jeder von ihnen träumt von einem warmen Zuhause und einem liebevollen Partner"
+
+#: .\templates\project\cat_list.html:57
+msgid "Додати котика"
+msgstr "Füge eine Katze hinzu"
+
+#: .\templates\project\cat_list.html:85 .\templates\project\favorites.html:64
+msgid "Метис"
+msgstr "Mestize"
+
+#: .\templates\project\cat_list.html:87
+msgid "Дуже лагідний та спокійний котик."
+msgstr "Eine sehr sanfte und ruhige Katze."
+
+#: .\templates\project\cat_list.html:90
+msgid "Авторизуйтесь для деталей"
+msgstr "Melden Sie sich an, um Details zu erhalten"
+
+#: .\templates\project\cat_list.html:97
+msgid "Наразі котиків немає."
+msgstr "Im Moment sind keine Katzen da."
+
+#: .\templates\project\cats_index.html:5
+msgid "Головна — Система управління"
+msgstr "Startseite — Verwaltungssystem"
+
+#: .\templates\project\cats_index.html:262
+msgid "Вітаємо у CatShelter! 🐱"
+msgstr "Willkommen im CatShelter! 🐱"
+
+#: .\templates\project\cats_index.html:263
+msgid ""
+"Це платформа для керування притулками, де ми допомагаємо кожному пухнастику "
+"знайти свою родину."
+msgstr ""
+"Dies ist eine Plattform zur Verwaltung von Tierheimen, auf der wir jedem "
+"pelzigen Freund helfenseine Familie zu finden."
+
+#: .\templates\project\cats_index.html:264
+msgid "Розробник"
+msgstr "Entwickler"
+
+#: .\templates\project\cats_index.html:275
+msgid "Наші підопічні"
+msgstr "Unsere Schützlinge"
+
+#: .\templates\project\cats_index.html:298
+msgid "Переглянути усіх котиків →"
+msgstr "Alle Katzen ansehen →"
+
+#: .\templates\project\cats_index.html:304
+msgid "Історії щасливих хвостиків 🐾"
+msgstr "Geschichten von glücklichen Schwänzen 🐾"
+
+#: .\templates\project\cats_index.html:309
+msgid "12 травня"
+msgstr "12. Mai"
+
+#: .\templates\project\cats_index.html:311
+msgid "Олівер знайшов дім ❤️"
+msgstr "Oliver hat ein Zuhause gefunden ❤️"
+
+#: .\templates\project\cats_index.html:313
+msgid "Після трьох місяців у притулку Олівер нарешті поїхав до нової родини."
+msgstr ""
+"Nach drei Monaten im Tierheim kam Oliver endlich zu seiner neuen Familie."
+
+#: .\templates\project\cats_index.html:317
+msgid "10 травня"
+msgstr "10. Mai"
+
+#: .\templates\project\cats_index.html:319
+msgid "Поради ветеринара 🏥"
+msgstr "Rat vom Tierarzt 🏥"
+
+#: .\templates\project\cats_index.html:321
+msgid "Весною котикам особливо важливе правильне харчування та вітаміни."
+msgstr ""
+"Im Frühling sind die richtige Ernährung und Vitamine für Katzen besonders "
+"wichtig."
+
+#: .\templates\project\cats_index.html:325
+msgid "8 травня"
+msgstr "8. Mai"
+
+#: .\templates\project\cats_index.html:327
+msgid "Нові пухнастики 🐱"
+msgstr "Neue pelzige Freunde 🐱"
+
+#: .\templates\project\cats_index.html:329
+msgid "До нашого притулку приїхали троє нових котиків, які шукають дім."
+msgstr ""
+"Drei neue Kätzchen sind in unserem Tierheim angekommen und suchen ein "
+"Zuhause."
+
+#: .\templates\project\favorites.html:4
+msgid "Мої улюбленці"
+msgstr "Meine Favoriten"
+
+#: .\templates\project\favorites.html:40
+msgid "Ваше обране"
+msgstr "Ihre Favoriten"
+
+#: .\templates\project\favorites.html:41
+msgid "Тут зібрані котики, які вам сподобалися"
+msgstr "Hier sind die Katzen, die Ihnen gefallen haben."
+
+#: .\templates\project\favorites.html:44
+msgid "Додати ще"
+msgstr "Füge mehr hinzu"
+
+#: .\templates\project\favorites.html:69
+msgid "Дивитися"
+msgstr "Betrachten"
+
+#: .\templates\project\favorites.html:83
+msgid "Список порожній"
+msgstr "Die Liste ist leer."
+
+#: .\templates\project\favorites.html:84
+msgid "Додайте котиків, щоб вони з'явилися тут."
+msgstr "Füge hier Katzen hinzu, die angezeigt werden sollen."
+
+#: .\templates\project\favorites.html:87
+msgid "Знайти друга"
+msgstr "Finde einen Freund"
+
+#: .\templates\project\medical_record_form.html:6
+msgid "Додати медичний запис для"
+msgstr "Fügen Sie eine Krankenakte hinzu für"
+
+#: .\templates\project\password_change.html:11
+msgid "Новий пароль"
+msgstr "Neues Passwort"
+
+#: .\templates\project\password_change.html:12
+msgid "Безпека - понад усе!"
+msgstr "Sicherheit hat oberste Priorität!"
+
+#: .\templates\project\password_change.html:20
+msgid "Оновити пароль"
+msgstr "Passwort aktualisieren"
+
+#: .\templates\project\password_change.html:27
+msgid "Повернутися назад"
+msgstr "Geh zurück"
+
+#: .\templates\project\password_change_done.html:9
+msgid "Успіх!"
+msgstr "Erfolg!"
+
+#: .\templates\project\password_change_done.html:10
+msgid "Ваш пароль було успішно змінено."
+msgstr "Ihr Passwort wurde erfolgreich geändert."
+
+#: .\templates\project\shelter_confirm_delete.html:7
+msgid "Видалити притулок"
+msgstr "Unterstand löschen"
+
+#: .\templates\project\shelter_confirm_delete.html:8
+msgid "Усі котики цього притулку також можуть бути видалені!"
+msgstr "Alle Katzen in diesem Tierheim können ebenfalls entfernt werden!"
+
+#: .\templates\project\shelter_form.html:6
+msgid "Інформація про притулок"
+msgstr "Informationen zu Unterkünften"
+
+#: .\templates\project\shelter_list.html:5
+msgid "Наші притулки — CatShelter"
+msgstr "Unsere Unterkünfte — CatShelter"
+
+#: .\templates\project\shelter_list.html:73
+msgid "Наші притулки 🏠"
+msgstr "Unsere Unterkünfte 🏠"
+
+#: .\templates\project\shelter_list.html:74
+msgid "Місця, де починається шлях додому"
+msgstr "Orte, an denen die Heimreise beginnt"
+
+#: .\templates\project\shelter_list.html:78
+msgid "Додати притулок"
+msgstr "Schaffen Sie Schutz"
+
+#: .\templates\project\shelter_list.html:117
+msgid "Контакт уточнюється"
+msgstr "Der Kontakt wird festgelegt"
+
+#: .\templates\project\shelter_list.html:120
+msgid "Відвідати сайт"
+msgstr "Besuchen Sie die Website"
+
+#: .\templates\project\shelter_list.html:122
+msgid "Зателефонувати"
+msgstr "Anruf"
+
+#: .\templates\project\shelter_list.html:127
+#, fuzzy
+#| msgid "щоб побачити адресу та контакти"
+msgid "щоб побачити контакти"
+msgstr "Adresse und Kontaktdaten anzeigen"
+
+#: .\templates\project\shelter_list.html:134
+msgid "Притулки ще додаються до бази..."
+msgstr "Es werden weiterhin Unterkünfte in die Datenbank aufgenommen..."
+
+#: .\templates\registration\login.html:11
+msgid "Вхід"
+msgstr "Anmeldung"
+
+#: .\templates\registration\login.html:12
+msgid "Раді бачити вас знову!"
+msgstr "Schön, dich wiederzusehen!"
+
+#: .\templates\registration\login.html:26
+msgid "Ще немає аккаунту?"
+msgstr "Sie haben noch kein Konto?"
+
+#: .\templates\registration\login.html:27
+#: .\templates\registration\register.html:20
+msgid "Зареєструватися"
+msgstr "Registrieren"
+
+#: .\templates\registration\register.html:11
+msgid "Створити профіль"
+msgstr "Profil erstellen"
+
+#: .\templates\registration\register.html:12
+msgid "Станьте частиною нашої кото-родини"
+msgstr "Werde Teil unserer Katzenfamilie"
+
+#: .\templates\registration\register.html:26
+msgid "Вже маєте профіль?"
+msgstr "Sie haben bereits ein Profil?"
+
+#~ msgid "Повернутися до всіх"
+#~ msgstr "Zurück zur Übersicht"
+
+#~ msgid "Так"
+#~ msgstr "Ja"
+
+#~ msgid "Ні"
+#~ msgstr "Nein"
+
+#~ msgid "Увійдіть, щоб зв'язатися"
+#~ msgstr "Melden Sie sich an, um Kontakt aufzunehmen."
+
+#~ msgid "Успішна історія"
+#~ msgstr "Erfolgsgeschichte"
+
+#~ msgid "Наша красуня Мурка поїхала до нової родини в Київ!"
+#~ msgstr ""
+#~ "Unsere wunderschöne Murka ist zu ihrer neuen Familie nach Kiew gezogen!"
+
+#~ msgid "Шукати котиків"
+#~ msgstr "Suche Katzen"
+
+#~ msgid "Ветеринар на місці"
+#~ msgstr "Tierarzt vor Ort"

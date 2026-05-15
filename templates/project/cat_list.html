@@ -1,0 +1,102 @@
+{% extends 'project/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Наші котики — CatShelter" %}{% endblock %}
+
+{% block content %}
+<style>
+    /* HEADER & GRID */
+    .page-header { margin-bottom: 40px; text-align: center; }
+    .page-header h1 { font-size: 2.5rem; color: #333; margin-bottom: 10px; }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+
+    /* CARD STYLE */
+    .cat-card {
+        background: white; border-radius: 28px; overflow: hidden; height: 100%;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s ease;
+        border: 1px solid rgba(0,0,0,0.03); display: flex; flex-direction: column;
+    }
+    .cat-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+
+    .cat-img-wrapper { height: 280px; overflow: hidden; position: relative; background: #eee; }
+    .cat-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
+    .status-badge {
+        position: absolute; top: 15px; right: 15px; padding: 6px 14px; border-radius: 12px;
+        font-size: 0.8rem; font-weight: 700; backdrop-filter: blur(5px);
+    }
+    .status-searching { background: rgba(255, 255, 255, 0.9); color: #e67e22; }
+    .status-home { background: rgba(46, 204, 113, 0.9); color: white; }
+
+    /* INFO BLOCK */
+    .cat-info { padding: 25px; text-align: left; }
+    .cat-info h3 { margin: 0 0 5px; font-size: 1.5rem; color: #222; }
+    .cat-meta { color: #ff6b6b; font-weight: 600; font-size: 0.95rem; margin-bottom: 12px; display: block; }
+    .cat-details { margin-top: 15px; padding-top: 15px; border-top: 1px dashed #eee; }
+    .detail-item { margin-bottom: 8px; font-size: 0.9rem; color: #666; display: flex; align-items: center; gap: 8px; }
+    .cat-char { margin-top: 12px; font-style: italic; color: #888; font-size: 0.9rem; line-height: 1.5; }
+
+    /* BUTTONS */
+    .back-btn { display: inline-block; margin-bottom: 20px; color: #777; text-decoration: none; font-weight: 600; transition: 0.3s; }
+    .back-btn:hover { color: #ff6b6b; }
+    .btn-add {
+        display: inline-block; background: #2ecc71; color: white; padding: 12px 25px;
+        border-radius: 15px; text-decoration: none; font-weight: 700; margin-top: 15px; transition: 0.3s;
+    }
+    .btn-add:hover { background: #27ae60; transform: scale(1.05); color: white; }
+</style>
+
+<div class="py-4">
+    <a href="{% url 'cats_index' %}" class="back-btn">← {% trans "На головну" %}</a>
+
+    <div class="page-header">
+        <h1>{% trans "Наші підопічні 🐾" %}</h1>
+        <p class="text-muted">{% trans "Кожен з них мріє про теплий дім та люблячу людину" %}</p>
+        {% if user.is_staff %}
+            <a href="{% url 'cat_create' %}" class="btn-add">➕ {% trans "Додати котика" %}</a>
+        {% endif %}
+    </div>
+
+    <div class="cat-grid">
+        {% for cat in cats %}
+        <a href="{% url 'cat_detail' cat.id %}" class="text-decoration-none color-inherit">
+            <div class="cat-card">
+                <div class="cat-img-wrapper">
+                    {% if cat.photo %}
+                        <img src="{{ cat.photo.url }}" alt="{{ cat.name }}">
+                    {% else %}
+                        <div class="h-100 d-flex align-items-center justify-content-center" style="font-size: 4rem;">🐱</div>
+                    {% endif %}
+
+                    {% if cat.is_adopted %}
+                        <span class="status-badge status-home">🏠 {% trans "Вдома" %}</span>
+                    {% else %}
+                        <span class="status-badge status-searching">🔍 {% trans "Шукає дім" %}</span>
+                    {% endif %}
+                </div>
+
+                <div class="cat-info">
+                    <span class="cat-meta">{{ cat.age|floatformat:"-1" }} {% trans "р." %} • {{ cat.get_gender_display }}</span>
+                    <h3>{{ cat.name }}</h3>
+
+                    {% if user.is_authenticated %}
+                    <div class="cat-details">
+                        <div class="detail-item"><span>🧬</span> <strong>{% trans "Порода" %}:</strong> {{ cat.breed|default:_("Метис") }}</div>
+                        <div class="detail-item"><span>🎨</span> <strong>{% trans "Забарвлення" %}:</strong> {{ cat.color }}</div>
+                        <p class="cat-char"><strong>{% trans "Характер" %}:</strong> {{cat.character|default:_("Дуже лагідний та спокійний котик.") }}</p>
+                    </div>
+                    {% else %}
+                        <p class="mt-3 text-muted small">{% trans "Авторизуйтесь для деталей" %}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </a>
+        {% empty %}
+            <div class="text-center w-100 py-5" style="grid-column: 1 / -1;">
+                <p class="text-muted">{% trans "Наразі котиків немає." %}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

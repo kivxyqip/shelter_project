@@ -1,0 +1,15 @@
+# Віртуальне оточення
+.venv/
+venv/
+env/
+
+# База даних
+*.sqlite3
+
+# Тимчасові файли Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Статичні файли
+staticfiles/

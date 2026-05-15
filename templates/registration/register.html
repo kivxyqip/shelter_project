@@ -1,0 +1,33 @@
+{% extends 'project/base.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh; margin-top: 50px; margin-bottom: 50px;">
+    <div class="card shadow-lg border-0" style="width: 100%; max-width: 450px; border-radius: 20px;">
+        <div class="card-body p-5">
+            <div class="text-center mb-4">
+                <span style="font-size: 50px;">🐾</span>
+                <h2 class="fw-bold mt-2">{% trans "Створити профіль" %}</h2>
+                <p class="text-muted">{% trans "Станьте частиною нашої кото-родини" %}</p>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="d-grid gap-2 mt-4">
+                    <button type="submit" class="btn btn-success btn-lg" style="border-radius: 12px; background: #2ecc71; border: none;">
+                        {% trans "Зареєструватися" %}
+                    </button>
+                </div>
+            </form>
+
+            <div class="text-center mt-4">
+                <p class="small">{% trans "Вже маєте профіль?" %}
+                    <a href="{% url 'login' %}" style="color: #2ecc71; font-weight: bold; text-decoration: none;">{% trans "Увійти" %}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
