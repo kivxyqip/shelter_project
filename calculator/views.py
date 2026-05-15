@@ -80,6 +80,7 @@ class ShelterCreateView(CreateView):
         'email',
         'website',
         'has_vet'
+        'photo'
     ]
     success_url = reverse_lazy('shelter_list')
 
@@ -100,6 +101,7 @@ class ShelterUpdateView(UpdateView):
         'email',
         'website',
         'has_vet'
+        'photo'
     ]
     success_url = reverse_lazy('shelter_list')
 
@@ -152,9 +154,12 @@ class CatCreateView(CreateView):
         'gender',
         'breed_uk', 'breed_en', 'breed_de',
         'color_uk', 'color_en', 'color_de',
+        'character_uk', 'character_en', 'character_de',
+        'history_uk', 'history_en', 'history_de',
         'arrival_date',
         'is_vaccinated',
         'is_sterilized',
+        'is_adopted',
         'photo'
     ]
     template_name = 'project/cat_form.html'
@@ -175,9 +180,12 @@ class CatUpdateView(UpdateView):
         'gender',
         'breed_uk', 'breed_en', 'breed_de',
         'color_uk', 'color_en', 'color_de',
+        'character_uk', 'character_en', 'character_de',
+        'history_uk', 'history_en', 'history_de',
         'arrival_date',
         'is_vaccinated',
         'is_sterilized',
+        'is_adopted',
         'photo'
     ]
     template_name = 'project/cat_form.html'
@@ -206,6 +214,8 @@ class MedicalRecordCreateView(CreateView):
         'checkup_date', 'weight', 'temperature',
         'diagnosis_uk', 'diagnosis_en', 'diagnosis_de',
         'treatment_uk', 'treatment_en', 'treatment_de',
+        'recommendations_uk', 'recommendations_en', 'recommendations_de',
+        'next_visit',
         'vet_name'
     ]
 
