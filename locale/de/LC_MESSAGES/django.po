@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 18:25+0300\n"
+"POT-Creation-Date: 2026-05-15 23:18+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -236,10 +236,8 @@ msgid "Досьє котика"
 msgstr "Katzenakte"
 
 #: .\templates\project\cat_detail.html:55
-#, fuzzy
-#| msgid "Повернутися назад"
 msgid "Повернутися"
-msgstr "Geh zurück"
+msgstr "Zurückkehren"
 
 #: .\templates\project\cat_detail.html:57 .\templates\project\cat_list.html:73
 msgid "Вдома"
@@ -266,8 +264,6 @@ msgid "Стерилізація"
 msgstr "Sterilisation"
 
 #: .\templates\project\cat_detail.html:74
-#, fuzzy
-#| msgid "Дата прибуття"
 msgid "Прибуття"
 msgstr "Ankunftsdatum"
 
@@ -338,7 +334,7 @@ msgid "В обране"
 msgstr "Zu Favoriten hinzufügen"
 
 #: .\templates\project\cat_detail.html:135
-#: .\templates\project\shelter_list.html:127
+#: .\templates\project\shelter_list.html:133
 msgid "Увійдіть"
 msgstr "Anmelden"
 
@@ -354,10 +350,8 @@ msgid "Видалити"
 msgstr "Entfernen"
 
 #: .\templates\project\cat_detail.html:142
-#, fuzzy
-#| msgid "Додати медзапис"
 msgid "Додати запис"
-msgstr "Krankenakte hinzufügen"
+msgstr "Eintrag hinzufügen"
 
 #: .\templates\project\cat_detail.html:146
 msgid "Новини"
@@ -438,75 +432,84 @@ msgstr "Melden Sie sich an, um Details zu erhalten"
 msgid "Наразі котиків немає."
 msgstr "Im Moment sind keine Katzen da."
 
-#: .\templates\project\cats_index.html:5
-msgid "Головна — Система управління"
-msgstr "Startseite — Verwaltungssystem"
+#: .\templates\project\cats_index.html:4
+msgid "Головна — CatShelter"
+msgstr "Startseite — CatShelter"
 
-#: .\templates\project\cats_index.html:262
+#: .\templates\project\cats_index.html:55
 msgid "Вітаємо у CatShelter! 🐱"
 msgstr "Willkommen im CatShelter! 🐱"
 
-#: .\templates\project\cats_index.html:263
-msgid ""
-"Це платформа для керування притулками, де ми допомагаємо кожному пухнастику "
-"знайти свою родину."
+#: .\templates\project\cats_index.html:56
+#, fuzzy
+#| msgid ""
+#| "Це платформа для керування притулками, де ми допомагаємо кожному "
+#| "пухнастику знайти свою родину."
+msgid "Допомагаємо кожному пухнастику знайти свою родину."
 msgstr ""
 "Dies ist eine Plattform zur Verwaltung von Tierheimen, auf der wir jedem "
 "pelzigen Freund helfenseine Familie zu finden."
 
-#: .\templates\project\cats_index.html:264
+#: .\templates\project\cats_index.html:57
 msgid "Розробник"
 msgstr "Entwickler"
 
-#: .\templates\project\cats_index.html:275
+#: .\templates\project\cats_index.html:65
 msgid "Наші підопічні"
 msgstr "Unsere Schützlinge"
 
-#: .\templates\project\cats_index.html:298
+#: .\templates\project\cats_index.html:84
 msgid "Переглянути усіх котиків →"
 msgstr "Alle Katzen ansehen →"
 
-#: .\templates\project\cats_index.html:304
+#: .\templates\project\cats_index.html:88
 msgid "Історії щасливих хвостиків 🐾"
 msgstr "Geschichten von glücklichen Schwänzen 🐾"
 
-#: .\templates\project\cats_index.html:309
+#: .\templates\project\cats_index.html:98
 msgid "12 травня"
 msgstr "12. Mai"
 
-#: .\templates\project\cats_index.html:311
+#: .\templates\project\cats_index.html:99
 msgid "Олівер знайшов дім ❤️"
 msgstr "Oliver hat ein Zuhause gefunden ❤️"
 
-#: .\templates\project\cats_index.html:313
-msgid "Після трьох місяців у притулку Олівер нарешті поїхав до нової родини."
+#: .\templates\project\cats_index.html:100
+#, fuzzy
+#| msgid ""
+#| "Після трьох місяців у притулку Олівер нарешті поїхав до нової родини."
+msgid "Олівер нарешті поїхав до нової родини."
 msgstr ""
 "Nach drei Monaten im Tierheim kam Oliver endlich zu seiner neuen Familie."
 
-#: .\templates\project\cats_index.html:317
+#: .\templates\project\cats_index.html:103
 msgid "10 травня"
 msgstr "10. Mai"
 
-#: .\templates\project\cats_index.html:319
+#: .\templates\project\cats_index.html:104
 msgid "Поради ветеринара 🏥"
 msgstr "Rat vom Tierarzt 🏥"
 
-#: .\templates\project\cats_index.html:321
-msgid "Весною котикам особливо важливе правильне харчування та вітаміни."
+#: .\templates\project\cats_index.html:105
+#, fuzzy
+#| msgid "Весною котикам особливо важливе правильне харчування та вітаміни."
+msgid "Весною важливо правильне харчування та вітаміни."
 msgstr ""
 "Im Frühling sind die richtige Ernährung und Vitamine für Katzen besonders "
 "wichtig."
 
-#: .\templates\project\cats_index.html:325
+#: .\templates\project\cats_index.html:108
 msgid "8 травня"
 msgstr "8. Mai"
 
-#: .\templates\project\cats_index.html:327
+#: .\templates\project\cats_index.html:109
 msgid "Нові пухнастики 🐱"
 msgstr "Neue pelzige Freunde 🐱"
 
-#: .\templates\project\cats_index.html:329
-msgid "До нашого притулку приїхали троє нових котиків, які шукають дім."
+#: .\templates\project\cats_index.html:110
+#, fuzzy
+#| msgid "До нашого притулку приїхали троє нових котиків, які шукають дім."
+msgid "Троє нових котиків шукають дім."
 msgstr ""
 "Drei neue Kätzchen sind in unserem Tierheim angekommen und suchen ein "
 "Zuhause."
@@ -603,21 +606,19 @@ msgstr "Schaffen Sie Schutz"
 msgid "Контакт уточнюється"
 msgstr "Der Kontakt wird festgelegt"
 
-#: .\templates\project\shelter_list.html:120
+#: .\templates\project\shelter_list.html:126
 msgid "Відвідати сайт"
 msgstr "Besuchen Sie die Website"
 
-#: .\templates\project\shelter_list.html:122
+#: .\templates\project\shelter_list.html:128
 msgid "Зателефонувати"
 msgstr "Anruf"
 
-#: .\templates\project\shelter_list.html:127
-#, fuzzy
-#| msgid "щоб побачити адресу та контакти"
+#: .\templates\project\shelter_list.html:133
 msgid "щоб побачити контакти"
-msgstr "Adresse und Kontaktdaten anzeigen"
+msgstr "Kontaktdaten anzeigen"
 
-#: .\templates\project\shelter_list.html:134
+#: .\templates\project\shelter_list.html:140
 msgid "Притулки ще додаються до бази..."
 msgstr "Es werden weiterhin Unterkünfte in die Datenbank aufgenommen..."
 
@@ -649,6 +650,9 @@ msgstr "Werde Teil unserer Katzenfamilie"
 #: .\templates\registration\register.html:26
 msgid "Вже маєте профіль?"
 msgstr "Sie haben bereits ein Profil?"
+
+#~ msgid "Головна — Система управління"
+#~ msgstr "Startseite — Verwaltungssystem"
 
 #~ msgid "Повернутися до всіх"
 #~ msgstr "Zurück zur Übersicht"

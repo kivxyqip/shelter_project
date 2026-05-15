@@ -115,6 +115,12 @@
                     <div class="shelter-info-item"><span>📍</span> <div>{{ s.address }}</div></div>
                     <div class="shelter-info-item"><span>🕒</span> <div>{{ s.working_hours }}</div></div>
                     <div class="shelter-info-item"><span>📞</span> <div>{{ s.phone|default:_("Контакт уточнюється") }}</div></div>
+                    {% if s.email %}
+                        <div class="shelter-info-item">
+                        <span>📧</span><div><a href="mailto:{{ s.email }}" style="color: inherit;">{{ s.email }}</a></div>
+                        </div>
+
+                    {% endif %}
 
                     {% if s.website %}
                         <a href="{{ s.website }}" target="_blank" class="contact-btn">🌐 {% trans "Відвідати сайт" %}</a>
