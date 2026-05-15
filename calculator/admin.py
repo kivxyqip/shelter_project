@@ -12,6 +12,7 @@ class ShelterAdmin(TranslationAdmin):
         'phone',
         'capacity',
         'has_vet',
+        'photo',
     )
     list_display = (
         'name',
@@ -20,6 +21,7 @@ class ShelterAdmin(TranslationAdmin):
         'phone',
         'capacity',
         'has_vet',
+        'photo'
     )
     list_filter = ('has_vet',)
     search_fields = ('name', 'address')
