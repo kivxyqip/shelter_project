@@ -55,7 +55,7 @@ class CatAdmin(TranslationAdmin):
 @admin.register(MedicalRecord)
 class MedicalRecordAdmin(TranslationAdmin):
     fields = (
-        'cat', 'checkup_date', 'weight',
+        'cat', 'checkup_date', 'weight', 'temperature',
         'vet_name_uk', 'vet_name_en', 'vet_name_de',
         'diagnosis_uk', 'diagnosis_en', 'diagnosis_de',
         'treatment_uk', 'treatment_en', 'treatment_de',
