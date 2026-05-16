@@ -287,7 +287,7 @@
                 <div class="img-stub">🐱</div>
             {% endif %}
             <h3>{{ cat.name }}</h3>
-            <p>{{ cat.age|floatformat:"-1" }} р. | {{ cat.get_gender_display }}</p>
+            <p>{{ cat.age|floatformat:"-1" }}{% trans "р." %} | {{ cat.get_gender_display }}</p>
         </div>
     </a>
     {% endfor %}

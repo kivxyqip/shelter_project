@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-16 20:37+0300\n"
+"POT-Creation-Date: 2026-05-16 21:00+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,7 +75,7 @@ msgid "Вік"
 msgstr "Age"
 
 #: .\calculator\models.py:35 .\templates\project\cat_detail.html:68
-#: .\templates\project\cat_list.html:88
+#: .\templates\project\cat_list.html:85
 msgid "Порода"
 msgstr "Breed"
 
@@ -95,7 +95,7 @@ msgstr "Sterilized"
 msgid "Стать"
 msgstr "Sex"
 
-#: .\calculator\models.py:40 .\templates\project\cat_list.html:90
+#: .\calculator\models.py:40 .\templates\project\cat_list.html:87
 msgid "Характер"
 msgstr "Personality"
 
@@ -247,11 +247,12 @@ msgstr "Home"
 msgid "Шукає дім"
 msgstr "Looking for a home"
 
-#: .\templates\project\cat_detail.html:69
+#: .\templates\project\cat_detail.html:69 .\templates\project\cat_list.html:80
+#: .\templates\project\cats_index.html:290
 msgid "р."
 msgstr "y.o."
 
-#: .\templates\project\cat_detail.html:71 .\templates\project\cat_list.html:89
+#: .\templates\project\cat_detail.html:71 .\templates\project\cat_list.html:86
 msgid "Забарвлення"
 msgstr "Color"
 
@@ -413,24 +414,19 @@ msgstr "Each of them dreams of a warm home and a loving person"
 msgid "Додати котика"
 msgstr "Add a cat"
 
-#: .\templates\project\cat_list.html:81
-#, python-format
-msgid "%(age)s р."
-msgstr "%(age)s y.o."
-
-#: .\templates\project\cat_list.html:88 .\templates\project\favorites.html:64
+#: .\templates\project\cat_list.html:85 .\templates\project\favorites.html:64
 msgid "Метис"
 msgstr "Mestizo"
 
-#: .\templates\project\cat_list.html:90
+#: .\templates\project\cat_list.html:87
 msgid "Дуже лагідний та спокійний котик."
 msgstr "A very gentle and calm cat."
 
-#: .\templates\project\cat_list.html:93
+#: .\templates\project\cat_list.html:90
 msgid "Авторизуйтесь для деталей"
 msgstr "Sign in for details"
 
-#: .\templates\project\cat_list.html:100
+#: .\templates\project\cat_list.html:97
 msgid "Наразі котиків немає."
 msgstr "There are no cats at the moment."
 
@@ -640,6 +636,10 @@ msgstr "Become part of our cat family"
 #: .\templates\registration\register.html:26
 msgid "Вже маєте профіль?"
 msgstr "Already have a profile?"
+
+#, python-format
+#~ msgid "%(age)s р."
+#~ msgstr "%(age)s y.o."
 
 #~ msgid "Головна — CatShelter"
 #~ msgstr "Home page — CatShelter"
