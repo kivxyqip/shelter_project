@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 23:34+0300\n"
+"POT-Creation-Date: 2026-05-16 20:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,7 +75,7 @@ msgid "Вік"
 msgstr "Alter"
 
 #: .\calculator\models.py:35 .\templates\project\cat_detail.html:68
-#: .\templates\project\cat_list.html:85
+#: .\templates\project\cat_list.html:88
 msgid "Порода"
 msgstr "Züchten"
 
@@ -95,7 +95,7 @@ msgstr "Sterilisiert"
 msgid "Стать"
 msgstr "Sex"
 
-#: .\calculator\models.py:40 .\templates\project\cat_list.html:87
+#: .\calculator\models.py:40 .\templates\project\cat_list.html:90
 msgid "Характер"
 msgstr "Natur"
 
@@ -247,11 +247,11 @@ msgstr "Heim"
 msgid "Шукає дім"
 msgstr "Auf der Suche nach einem Zuhause"
 
-#: .\templates\project\cat_detail.html:69 .\templates\project\cat_list.html:80
+#: .\templates\project\cat_detail.html:69
 msgid "р."
 msgstr "J."
 
-#: .\templates\project\cat_detail.html:71 .\templates\project\cat_list.html:86
+#: .\templates\project\cat_detail.html:71 .\templates\project\cat_list.html:89
 msgid "Забарвлення"
 msgstr "Farbe"
 
@@ -416,19 +416,24 @@ msgstr ""
 msgid "Додати котика"
 msgstr "Füge eine Katze hinzu"
 
-#: .\templates\project\cat_list.html:85 .\templates\project\favorites.html:64
+#: .\templates\project\cat_list.html:81
+#, python-format
+msgid "%(age)s р."
+msgstr "%(age)s J."
+
+#: .\templates\project\cat_list.html:88 .\templates\project\favorites.html:64
 msgid "Метис"
 msgstr "Mestize"
 
-#: .\templates\project\cat_list.html:87
+#: .\templates\project\cat_list.html:90
 msgid "Дуже лагідний та спокійний котик."
 msgstr "Eine sehr sanfte und ruhige Katze."
 
-#: .\templates\project\cat_list.html:90
+#: .\templates\project\cat_list.html:93
 msgid "Авторизуйтесь для деталей"
 msgstr "Melden Sie sich an, um Details zu erhalten"
 
-#: .\templates\project\cat_list.html:97
+#: .\templates\project\cat_list.html:100
 msgid "Наразі котиків немає."
 msgstr "Im Moment sind keine Katzen da."
 
@@ -445,8 +450,8 @@ msgid ""
 "Це платформа для керування притулками, де ми допомагаємо кожному пухнастику "
 "знайти свою родину."
 msgstr ""
-"Dies ist eine Plattform zur Verwaltung von Tierheimen, auf der wir jedem pelzigen Freund helfen"
-"seine Familie zu finden."
+"Dies ist eine Plattform zur Verwaltung von Tierheimen, auf der wir jedem "
+"pelzigen Freund helfenseine Familie zu finden."
 
 #: .\templates\project\cats_index.html:264
 msgid "Розробник"
@@ -474,7 +479,8 @@ msgstr "Oliver hat ein Zuhause gefunden ❤️"
 
 #: .\templates\project\cats_index.html:313
 msgid "Після трьох місяців у притулку Олівер нарешті поїхав до нової родини."
-msgstr "Nach drei Monaten im Tierheim kam Oliver endlich zu seiner neuen Familie."
+msgstr ""
+"Nach drei Monaten im Tierheim kam Oliver endlich zu seiner neuen Familie."
 
 #: .\templates\project\cats_index.html:317
 msgid "10 травня"
@@ -486,7 +492,9 @@ msgstr "Rat vom Tierarzt 🏥"
 
 #: .\templates\project\cats_index.html:321
 msgid "Весною котикам особливо важливе правильне харчування та вітаміни."
-msgstr "Im Frühling sind die richtige Ernährung und Vitamine für Katzen besonders wichtig."
+msgstr ""
+"Im Frühling sind die richtige Ernährung und Vitamine für Katzen besonders "
+"wichtig."
 
 #: .\templates\project\cats_index.html:325
 msgid "8 травня"
@@ -497,9 +505,10 @@ msgid "Нові пухнастики 🐱"
 msgstr "Neue pelzige Freunde 🐱"
 
 #: .\templates\project\cats_index.html:329
-#| msgid "До нашого притулку приїхали троє нових котиків, які шукають дім."
 msgid "До нашого притулку приїхали троє нових котиків, які шукають дім."
-msgstr "Drei neue Kätzchen sind in unserem Tierheim angekommen und suchen ein Zuhause."
+msgstr ""
+"Drei neue Kätzchen sind in unserem Tierheim angekommen und suchen ein "
+"Zuhause."
 
 #: .\templates\project\favorites.html:4
 msgid "Мої улюбленці"

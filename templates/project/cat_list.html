@@ -77,7 +77,10 @@
                 </div>
 
                 <div class="cat-info">
-                    <span class="cat-meta">{{ cat.age|floatformat:"-1" }} {% trans "р." %} • {{ cat.get_gender_display }}</span>
+                    <span class="cat-meta">
+                    {% blocktrans with age=cat.age|floatformat:"-1" %}{{ age }} р.{% endblocktrans %}
+                    • {{ cat.get_gender_display }}
+                    </span>
                     <h3>{{ cat.name }}</h3>
 
                     {% if user.is_authenticated %}
